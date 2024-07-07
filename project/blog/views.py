@@ -5,7 +5,12 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("<H1>Hello!</H1>")
+    posts = [
+        {"title": "My Awesome Blog", "author": "Me"},
+        {"title": "Not a Awesome Blog", "author": "you"},
+    ]
+    context = {"posts": posts}
+    return render(request, "home.html", context)
 
 
 def about(request):
