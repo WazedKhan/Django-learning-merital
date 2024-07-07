@@ -49,6 +49,10 @@ A virtual environment is a tool that helps to keep dependencies required by diff
 
    - On Windows:
      ```bash
+     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 
+     or
+     Set-ExecutionPolicy Unrestricted -Scope Process
+     ----------------------------------------------------------------------------
      myenv\Scripts\activate
      ```
    - On macOS/Linux:
